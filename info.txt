@@ -1,0 +1,7 @@
+Font awesome kit
+https://fontawesome.com/kits/b0f29e9bfe/use
+
+
+Google fonts
+Open Sans
+font-family: 'Open Sans', sans-serif;
