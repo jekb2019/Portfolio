@@ -94,6 +94,14 @@ p{
   color: var(--color-black);
   margin: 4px 0;
 }
+button{
+/* 버튼의 기본 css 없애기 */
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 
 /* Nav bar */
 #navbar{
@@ -130,13 +138,32 @@ p{
   background-color: var(--color-dark-pink);
 }
 
-
-
-
-.home__avatar {
-  width: 500px;
-  height: 500px;
+/* Home */
+#home{
+  background:url("imgs/home-background.png") center/cover;
+  padding: 40px;
+  text-align: center;
 }
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white)
+}
+.home__title,
+.home__description{
+  color:var(--color-white);
+}
+.home__contact{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin:24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-light-white);
+  border-radius: var(--size-border-radius);
+  color:var(--color-white);
+}
+
 .testimonial__avatar {
   width: 500px;
   height: 500px;
