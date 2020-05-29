@@ -5,7 +5,6 @@ const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll',()=>{
-    var y = window.scrollY;
     if(window.scrollY > navbarHeight){
         navbar.classList.add('navbar--dark');
     }else{
@@ -35,3 +34,13 @@ function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
 }
+
+// Make home slowly fade to transparent as window scroll down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+    let coveragePercent = 1-window.scrollY/homeHeight;
+    if(coveragePercent >= 0){
+        home.style.opacity = coveragePercent;
+    }
+})
