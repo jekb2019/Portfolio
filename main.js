@@ -29,12 +29,6 @@ homeContactBtn.addEventListener('click',()=>{
     scrollIntoView('#contact');
 })
 
-// Scroll down to a specific element of provided selecor
-function scrollIntoView(selector){
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior:'smooth'});
-}
-
 // Make home slowly fade to transparent as window scroll down
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
@@ -44,3 +38,22 @@ document.addEventListener('scroll',()=>{
         home.style.opacity = coveragePercent;
     }
 })
+
+// Arrow up for scroll to top
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener('scroll',()=>{
+    if(window.scrollY < homeHeight/2){
+        arrowUp.classList.remove('visible');
+    }else{
+        arrowUp.classList.add('visible');
+    }
+})
+arrowUp.addEventListener('click',()=>{
+    scrollIntoView('#home');
+})
+
+// Scroll down to a specific element of provided selecor
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior:'smooth'});
+}
