@@ -10,7 +10,7 @@ document.addEventListener('scroll',()=>{
     }else{
         navbar.classList.remove('navbar--dark')
     }
-})
+});
 
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
@@ -27,7 +27,7 @@ navbarMenu.addEventListener('click',(event)=>{
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener('click',()=>{
     scrollIntoView('#contact');
-})
+});
 
 // Make home slowly fade to transparent as window scroll down
 const home = document.querySelector('.home__container');
@@ -37,7 +37,7 @@ document.addEventListener('scroll',()=>{
     if(coveragePercent >= 0){
         home.style.opacity = coveragePercent;
     }
-})
+});
 
 // Arrow up for scroll to top
 const arrowUp = document.querySelector(".arrow-up");
@@ -50,10 +50,36 @@ document.addEventListener('scroll',()=>{
 })
 arrowUp.addEventListener('click',()=>{
     scrollIntoView('#home');
-})
+});
+
+// Project filter
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click',(event)=>{
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if(filter == null){
+        return;
+    };    
+    projectContainer.classList.add('anim-out');
+    // 0.3초 뒤에 실행
+    setTimeout(()=>{
+        projects.forEach((project)=>{
+            console.log(project.dataset.type);
+            if(filter === '*' || filter === project.dataset.type){
+                project.classList.remove('invisible');
+            }else{
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    },300);
+});
+
+
 
 // Scroll down to a specific element of provided selecor
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
-}
+};
