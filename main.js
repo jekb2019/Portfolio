@@ -10,20 +10,26 @@ document.addEventListener('scroll',()=>{
     }else{
         navbar.classList.remove('navbar--dark')
     }
+    navbarMenu.classList.remove('open');
 });
 
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener('click',(event)=>{
-    document.querySelectorAll(".navbar__menu--item").forEach(button => button.classList.remove("active"));
     const target = event.target;
-    target.classList.add('active');
     const link = target.dataset.link;
     if(link == null){
         return;
     }
     scrollIntoView(link);
 });
+// Toggle button on Navbar
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener('click',()=>{
+    navbarMenu.classList.toggle('open');
+});
+
+
 
 // Handle click on "contact me" button
 const homeContactBtn = document.querySelector(".home__contact");
