@@ -15,7 +15,9 @@ document.addEventListener('scroll',()=>{
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener('click',(event)=>{
+    document.querySelectorAll(".navbar__menu--item").forEach(button => button.classList.remove("active"));
     const target = event.target;
+    target.classList.add('active');
     const link = target.dataset.link;
     if(link == null){
         return;
@@ -61,6 +63,13 @@ workBtnContainer.addEventListener('click',(event)=>{
     if(filter == null){
         return;
     };    
+    // Remove selection frmo the precious item and select the new one
+    const active = document.querySelector('.category__btn.selected');
+    if(active != null){
+        active.classList.remove('selected');
+    }
+    event.target.classList.add('selected');
+
     projectContainer.classList.add('anim-out');
     // 0.3초 뒤에 실행
     setTimeout(()=>{
