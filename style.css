@@ -122,7 +122,7 @@ button{
 }
 #navbar.navbar--dark{
   background-color: var(--color-light-grey);
-  padding:8px;
+  padding:3px;
 }
 .navbar__logo{
   font-size: var(--font-medium);
@@ -147,7 +147,7 @@ button{
 }
 .navbar__menu--item:hover{
 border-color: var(--color-white);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-Xlight-grey);
 }
 .navbar__toggle-btn{
   position: absolute;
@@ -160,6 +160,7 @@ border-color: var(--color-white);
 /* Home */
 #home{
   background:url("imgs/home-background.png") center/cover;
+  background-attachment: fixed;
   padding: 40px;
   padding-top: 105px;
   text-align: center;
@@ -184,7 +185,7 @@ border-color: var(--color-white);
   color:var(--color-white);
 }
 .home__contact:hover{
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-light-grey);
 }
 
 /* Section Common */
@@ -216,7 +217,7 @@ border-color: var(--color-white);
   margin-bottom: 16px;
 }
 .major__icon:hover i{
-  color:var(--color-pink);
+  color:var(--color-Xlight-grey);
   transform: rotate(-30deg) scale(1.1);
 }
 .major__icon i{
@@ -257,10 +258,13 @@ border-color: var(--color-white);
 /* Skills */
 
 #skills {
-  background-color:var(--color-yellow);
+  background:url("imgs/home-background.png") center/cover;
+  background-attachment: fixed;
 }
 
-
+#skills h1, #skills h2, #skills p{
+  color:white;
+}
 
 .testimonial__avatar {
   width: 500px;
@@ -325,7 +329,7 @@ border-color: var(--color-white);
 }
 .category__btn.selected,
 .category__btn:hover{
-  background-color: var(--color-pink);
+  background-color: var(--color-Xlight-grey);
   color:var(--color-white);
 }
 .category__btn.selected .category__count,
@@ -441,7 +445,7 @@ border-color: var(--color-white);
   color:var(--color-light-grey);
 }
 .testimonial__speech-bubble a{
-  color:var(--color-pink); 
+  color:var(--color-black); 
 }
 
 /* Contact */
@@ -462,7 +466,7 @@ border-color: var(--color-white);
 }
 .contact__links i:hover{
   transform: scale(1.1);
-  color: var(--color-yellow);
+  color: var(--color-Xlight-grey);
   transition: all var(--animation-duration);
 }
 /* Scroll */
