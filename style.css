@@ -27,6 +27,7 @@
 
     --color-black: #000000;
 
+    --color-Xlight-grey: #b8b8b8;
     /* Font size */
 
     --font-large: 48px;
@@ -120,7 +121,7 @@ button{
   z-index: 10;
 }
 #navbar.navbar--dark{
-  background-color: var(--color-pink);
+  background-color: var(--color-light-grey);
   padding:8px;
 }
 .navbar__logo{
@@ -445,7 +446,7 @@ border-color: var(--color-white);
 
 /* Contact */
 #contact{
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-grey);
 }
 .contact__title,
 .contact__email,
@@ -473,7 +474,7 @@ border-color: var(--color-white);
   width: 70px;
   height: 70px;
   font-size: var(--font-large);
-  background-color: var(--color-pink);
+  background-color: var(--color-Xlight-grey);
   color: var(--color-white);
   border-radius: 50%;
   transition: opacity var(--animation-duration) ease-in;
@@ -506,7 +507,7 @@ border-color: var(--color-white);
   #navbar{
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-light-grey);
   }
   #navbar.navbar--dark{
     padding: 16px;
