@@ -234,6 +234,15 @@ border-color: var(--color-white);
   font-size: var(--font-small);
 }
 
+.about__schools {
+  text-align: left;
+}
+
+.about__schools__title {
+  font-size: var(--font-medium);
+  margin-bottom: 20px;
+}
+
 .school{
   display: flex;
   align-items: center;
@@ -253,6 +262,45 @@ border-color: var(--color-white);
   font-size: var(--font-micro);
 }
 .school__image{
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+}
+
+.about__experience {
+  text-align: left;
+}
+
+.about__experience__title {
+  font-size: var(--font-medium);
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.experience {
+  display: flex;
+  align-items: center;
+}
+
+.experience__description {
+  margin: 0 16px 10px 16px;
+  text-align: left;
+}
+
+.experience__name,
+.experience__job {
+  color:var(--color-light-grey);
+}
+
+.experience__name {
+  font-size: var(--font-small);
+}
+
+.experience__job {
+  font-size: var(--font-micro);
+}
+
+.experience__image{
   width: 50px;
   height: 50px;
   margin-right: 16px;
