@@ -306,6 +306,45 @@ border-color: var(--color-white);
   margin-right: 16px;
 }
 
+.about__license {
+  text-align: left;
+}
+
+.about__license__title {
+  font-size: var(--font-medium);
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.license {
+  display: flex;
+  align-items: center;
+}
+
+.license__description {
+  margin: 0 16px 10px 16px;
+  text-align: left;
+}
+
+.license__name,
+.license__detail {
+  color:var(--color-light-grey);
+}
+
+.license__name {
+  font-size: var(--font-small);
+}
+
+.license__detail {
+  font-size: var(--font-micro);
+}
+
+.license__image{
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+}
+
 /* Skills */
 
 #skills {
