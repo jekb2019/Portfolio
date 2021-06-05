@@ -69,7 +69,7 @@ workBtnContainer.addEventListener('click',(event)=>{
     if(filter == null){
         return;
     };    
-    // Remove selection frmo the precious item and select the new one
+    // Remove selection from the previous item and select the new one
     const active = document.querySelector('.category__btn.selected');
     if(active != null){
         active.classList.remove('selected');
@@ -77,7 +77,7 @@ workBtnContainer.addEventListener('click',(event)=>{
     event.target.classList.add('selected');
 
     projectContainer.classList.add('anim-out');
-    // 0.3초 뒤에 실행
+
     setTimeout(()=>{
         projects.forEach((project)=>{
             console.log(project.dataset.type);

@@ -271,6 +271,11 @@ border-color: var(--color-white);
   text-align: left;
 }
 
+#youtube__link {
+  color:var(--color-light-grey);
+  margin-left: 5px;
+}
+
 .about__experience__title {
   font-size: var(--font-medium);
   margin-top: 30px;
@@ -554,6 +559,11 @@ border-color: var(--color-white);
   font-size: var(--font-large);
   margin: 24px 0;
 }
+
+.contact__links a {
+  margin: 5px;
+}
+
 .contact__links i:hover{
   transform: scale(1.1);
   color: var(--color-Xlight-grey);
