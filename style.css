@@ -28,6 +28,8 @@
     --color-black: #000000;
 
     --color-Xlight-grey: #b8b8b8;
+
+    --color-dark-red: #c4302B;
     /* Font size */
 
     --font-large: 48px;
@@ -274,6 +276,10 @@ border-color: var(--color-white);
 #youtube__link {
   color:var(--color-light-grey);
   margin-left: 5px;
+}
+
+#youtube__link:hover {
+  color: var(--color-dark-red);
 }
 
 .about__experience__title {
